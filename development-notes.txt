@@ -1,0 +1,6 @@
+Configuration
+- we can run antoher spesific custom Config using this command below:
+npx playwright test [test-case-relative-path] --config playwright.config-one.js
+
+- we can parameterize value in our config using this command below:
+npx playwright test [test-case-relative-path] --config playwright.config-one.js --project=[project-name]
