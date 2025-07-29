@@ -19,6 +19,13 @@
   - we can parameterize value in our config using this command below:
   npx playwright test [test-case-relative-path] --config playwright.config-one.js --project=[project-name]
 
-~~ Debug the file
+~~ Search annotation in the file
   - check if there are .only in our test using this command below:
   grep -r '.only(' tests/
+
+~~ Tag test
+  - running testcase using tag like this command below:
+  npx playwright test --grep @smoke
+  npx playwright test --grep @regression --grep @smoke
+  npx playwright test --grep @regression --grep @smoke
+  npx playwright test --grep '@smoke.*@regression'

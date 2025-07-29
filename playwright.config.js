@@ -18,6 +18,7 @@ const config = {
   reporter: "html",
   timeout: 40 * 1000, //global timeout 40sec, every step
   // timeout: 100 * 1000, //for debuging only
+  retries: 1,
   expect: {
     timeout: 10000, //for assertion
   },
