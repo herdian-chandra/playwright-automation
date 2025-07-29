@@ -24,15 +24,30 @@ const config = {
   expect: {
     timeout: 10000, //for assertion
   },
-  use: {
-    browserName: "chromium", //chrome
-    // browserName: "firefox", //firefox
-    // browserName: "webkit", //safari
-    headless: false,
-    screenshot: "on",
-    trace: "retain-on-failure", // on, off
-    // trace: "on", // on, off
-  },
+  projects: [
+    {
+      name: "normal",
+      use: {
+        browserName: "chromium", //chrome
+        // browserName: "firefox", //firefox
+        // browserName: "webkit", //safari
+        headless: false,
+        screenshot: "on",
+        trace: "retain-on-failure", // on, off
+        // trace: "on", // on, off
+      },
+    },
+    {
+      name: "headles",
+      use: {
+        browserName: "chromium",
+        headless: true,
+        screenshot: "on",
+        trace: "retain-on-failure", // on, off
+        // trace: "on", // on, off
+      },
+    },
+  ],
 };
 
 module.exports = config;
