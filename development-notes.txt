@@ -1,6 +1,20 @@
-Configuration
-- we can run antoher spesific custom Config using this command below:
-npx playwright test [test-case-relative-path] --config playwright.config-one.js
+Initial the project & run the test
+  - we can init the project by running this command below:
+    npm init playwright@latest --save-dev
 
-- we can parameterize value in our config using this command below:
-npx playwright test [test-case-relative-path] --config playwright.config-one.js --project=[project-name]
+  - running the test by running this command below:
+    npx playwright test
+
+  - ui mode
+    npx playwright test --ui
+
+  - debug mode
+    npx playwright test --debug
+
+
+Configuration
+  - we can run antoher spesific custom Config using this command below:
+  npx playwright test [test-case-relative-path] --config playwright.config-one.js
+
+  - we can parameterize value in our config using this command below:
+  npx playwright test [test-case-relative-path] --config playwright.config-one.js --project=[project-name]

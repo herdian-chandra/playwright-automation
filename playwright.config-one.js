@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig, devices } from "@playwright/test";
 import { trace } from "console";
+import { permission } from "process";
 
 /**
  * Read environment variables from file.
@@ -28,6 +29,18 @@ const config = {
         headless: false,
         screenshot: "on",
         trace: "retain-on-failure",
+        // ignoreHttpsError: true, // ssl certificate
+        // permission: ["geolocation"],
+      },
+    },
+    {
+      name: "mobile",
+      use: {
+        browserName: "chromium",
+        headless: false,
+        screenshot: "on",
+        trace: "retain-on-failure",
+        // ...devices["Galaxy S24"],
       },
     },
     {
