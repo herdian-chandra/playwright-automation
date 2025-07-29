@@ -6,7 +6,7 @@ const { beforeEach } = require("node:test");
  */
 // browser and page is a fixture feature from playwright
 
-test("@smoke @regression Browser context testcase in playwright", async ({
+test("@regression @smoke Browser context testcase in playwright", async ({
   browser,
 }) => {
   beforeEach("", () => {});
@@ -51,7 +51,7 @@ test("@smoke @regression Browser context testcase in playwright", async ({
   console.log("~~~ all card title: ", allCardTitle);
 });
 
-test("@smoke @regression UI basic action", async ({ page }) => {
+test("@regression @smoke UI basic action", async ({ page }) => {
   //goto url
   await page.goto("https://rahulshettyacademy.com/loginpagePractise/");
 
@@ -80,7 +80,7 @@ test("@smoke @regression UI basic action", async ({ page }) => {
   await signIn_Btn.click();
 });
 
-test("@smoke Handling child windows & tab", async ({ browser }) => {
+test("@regression Handling child windows & tab", async ({ browser }) => {
   // create new context
   const context = await browser.newContext();
   const page = await context.newPage();

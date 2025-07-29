@@ -2,7 +2,12 @@
   "name": "playwright-automation",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test-all": "npx playwright test",
+    "regression": "npx playwright test --grep @regression",
+    "smoke": "npx playwright test --grep @regression --grep @smoke",
+    "allure-report": "npx playwright test --grep @smoke --reporter=line,allure-playwright"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

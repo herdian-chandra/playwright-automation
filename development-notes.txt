@@ -36,3 +36,10 @@
   allure generate ./allure-results --clean
   - open the report
   allure open ./allure-report
+
+~~ Jenkins
+  - create new freesytle project with any name
+  - choose the SCM
+  - add build step
+    Mac OS: choose - execute shell
+    Windows OS: choose - execute batch command
