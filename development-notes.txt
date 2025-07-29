@@ -11,7 +11,6 @@
   - debug mode
     npx playwright test --debug
 
-
 ~~ Configuration
   - we can run antoher spesific custom Config using this command below:
   npx playwright test [test-case-relative-path] --config playwright.config-one.js
@@ -27,5 +26,13 @@
   - running testcase using tag like this command below:
   npx playwright test --grep @smoke
   npx playwright test --grep @regression --grep @smoke
-  npx playwright test --grep @regression --grep @smoke
-  npx playwright test --grep '@smoke.*@regression'
+
+~~ Allure report
+  - installation:
+  npm install -D allure-playwright
+  - using the reporter like this command below:
+  npx playwright test --grep @regression --grep @smoke --reporter=line,allure-playwright
+  - generate report
+  allure generate ./allure-results --clean
+  - open the report
+  allure open ./allure-report

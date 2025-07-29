@@ -5,7 +5,8 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 /screenshot
-
+/allure-results
+/allure-report
 
 # Created by https://www.toptal.com/developers/gitignore/api/node
 # Edit at https://www.toptal.com/developers/gitignore?templates=node

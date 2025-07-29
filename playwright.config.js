@@ -16,6 +16,7 @@ import { trace } from "console";
 const config = {
   testDir: "./tests",
   reporter: "html",
+  // reporter: [["line"], ["allure-playwright"]],
   timeout: 40 * 1000, //global timeout 40sec, every step
   // timeout: 100 * 1000, //for debuging only
   retries: 1,
