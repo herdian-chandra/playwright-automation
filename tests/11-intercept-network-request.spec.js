@@ -26,5 +26,4 @@ test("Test security testing, unatuhorized order not belong in account", async ({
       })
   );
   await view_btn.first().click();
-  await page.pause();
 });

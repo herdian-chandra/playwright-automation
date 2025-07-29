@@ -1,5 +1,5 @@
 const { test, expect, request } = require("@playwright/test");
-const { APIUtils } = require("../tests/utils/APIUtils");
+const { APIUtils } = require("../utils/APIUtils");
 
 // global variable
 let responseCreateOrder;

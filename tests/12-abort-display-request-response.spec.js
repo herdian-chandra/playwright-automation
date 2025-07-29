@@ -32,7 +32,6 @@ test("UI basic action", async ({ page }) => {
 
   // abort the image
   // await page.route("**/*.{jpg, png, jpeg}", (route) => route.abort());
-  // await page.pause();
 
   // display all request and response from the page of website
   page.on("request", (request) => console.log(`~~~REQUEST:`, request.url()));

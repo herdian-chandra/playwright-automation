@@ -1,4 +1,4 @@
-Initial the project & run the test
+~~ Initial the project & run the test
   - we can init the project by running this command below:
     npm init playwright@latest --save-dev
 
@@ -12,9 +12,13 @@ Initial the project & run the test
     npx playwright test --debug
 
 
-Configuration
+~~ Configuration
   - we can run antoher spesific custom Config using this command below:
   npx playwright test [test-case-relative-path] --config playwright.config-one.js
 
   - we can parameterize value in our config using this command below:
   npx playwright test [test-case-relative-path] --config playwright.config-one.js --project=[project-name]
+
+~~ Debug the file
+  - check if there are .only in our test using this command below:
+  grep -r '.only(' tests/

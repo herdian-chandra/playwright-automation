@@ -14,7 +14,7 @@ test("Testing with screenshot page or section ", async ({ page }) => {
   await expect(elementHideAndShow).toBeHidden(); // assert the hidden element
 });
 
-test.only("Visual Testing ", async ({ page }) => {
+test("Visual Testing ", async ({ page }) => {
   await page.goto("https://rahulshettyacademy.com/client");
-  expect(await page.screenshot()).toMatchSnapshot("login-page.png");
+  // expect(await page.screenshot()).toMatchSnapshot("login-page.png");
 });

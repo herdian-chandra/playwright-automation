@@ -19,6 +19,7 @@ const config = {
   reporter: "html",
   timeout: 40 * 1000, //global timeout 40sec every step
   retries: 1, // retries 1 times the test if any failure
+  workers: 5,
   expect: {
     timeout: 10000, //for assertion
   },

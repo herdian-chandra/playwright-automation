@@ -1,5 +1,5 @@
 const { test, expect, request } = require("@playwright/test");
-const { APIUtils } = require("../tests/utils/APIUtils");
+const { APIUtils } = require("../utils/APIUtils");
 
 // global variable
 let responseCreateOrder;
@@ -39,7 +39,7 @@ test("Login into website using API test", async ({ page }) => {
   console.log(`~~~all the product card title:`, allCardProductTitle);
 });
 
-test.only("Create order using API test", async ({ page }) => {
+test("Create order using API test", async ({ page }) => {
   /**
    * Local Storage - set token into website
    */
@@ -71,6 +71,5 @@ test.only("Create order using API test", async ({ page }) => {
     }
   }
   const orderDetaild = await page.locator(".col-text").textContent();
-  await page.pause();
   expect(responseCreateOrder.orderId.includes(orderDetaild)).toBeTruthy;
 });

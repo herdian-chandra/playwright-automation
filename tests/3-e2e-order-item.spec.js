@@ -34,7 +34,7 @@ test("E2E Order item in Rahul Shetty Academy Ecom", async ({ page }) => {
   await productCardTitle.first().waitFor(); // wait for the list prouduct from API appears
   const allProductTitle = await productCardTitle.allTextContents();
   console.log("~~~ all product title: ", allProductTitle); // ensure product title
-  // await page.pause();
+
   const lengthOfProduct = await productCard.count(); // counting total length of product
   for (let i = 0; i < lengthOfProduct; i++) {
     if ((await productCard.nth(i).locator("b").textContent()) === productName) {
