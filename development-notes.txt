@@ -13,29 +13,29 @@
 
 ~~ Configuration
   - we can run antoher spesific custom Config using this command below:
-  npx playwright test [test-case-relative-path] --config playwright.config-one.js
+    npx playwright test [test-case-relative-path] --config playwright.config-one.js
 
   - we can parameterize value in our config using this command below:
-  npx playwright test [test-case-relative-path] --config playwright.config-one.js --project=[project-name]
+    npx playwright test [test-case-relative-path] --config playwright.config-one.js --project=[project-name]
 
 ~~ Search annotation in the file
   - check if there are .only in our test using this command below:
-  grep -r '.only(' tests/
+    grep -r '.only(' tests/
 
 ~~ Tag test
   - running testcase using tag like this command below:
-  npx playwright test --grep @smoke
-  npx playwright test --grep @regression --grep @smoke
+    npx playwright test --grep @smoke
+    npx playwright test --grep @regression --grep @smoke
 
 ~~ Allure report
   - installation:
-  npm install -D allure-playwright
+    npm install -D allure-playwright
   - using the reporter like this command below:
-  npx playwright test --grep @regression --grep @smoke --reporter=line,allure-playwright
+    npx playwright test --grep @regression --grep @smoke --reporter=line,allure-playwright
   - generate report
-  allure generate ./allure-results --clean
+    allure generate ./allure-results --clean
   - open the report
-  allure open ./allure-report
+    allure open ./allure-report
 
 ~~ Jenkins
   - create new freesytle project with any name
@@ -43,3 +43,13 @@
   - add build step
     Mac OS: choose - execute shell
     Windows OS: choose - execute batch command
+
+~~ BDD
+  - install config setup feature file
+    npm install @cucumber/cucumber
+  - create feature folder and feature files
+  - run this command below to generate step definition
+    npx cucumber-js
+  - create step_defintions folder under features folder
+  - create steps.js file under step_defintions folder
+  
